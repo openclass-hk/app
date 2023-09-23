@@ -2,8 +2,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace OpenclassApp.WebApi.Controllers;
 
+using Microsoft.AspNetCore.Authorization;
+
 [ApiController]
 [Route("[controller]")]
+[Authorize]
 public class WeatherForecastController : ControllerBase
 {
     private static readonly string[] Summaries = new[]
